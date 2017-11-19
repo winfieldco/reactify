@@ -62,6 +62,8 @@ module.exports = function(file, options) {
     isJSXFile = getExtensionsMatcher(extensions).exec(file);
   }
 
+  isJSXFile = false; // XXX Disable totally
+
   var transformVisitors = [].concat(
     options.harmony || options.es6 ?
       visitors.getAllVisitors() :
